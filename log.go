@@ -111,7 +111,7 @@ func (l *Logger) GetLevel() Level {
 }
 
 func (l *Logger) output(level string, v ...interface{}) {
-	l.logger.Output(2, fmt.Sprint(append([]interface{}{level}, v...)...))
+	l.logger.Output(3, fmt.Sprint(append([]interface{}{level}, v...)...))
 }
 
 // Trace emits a log at trace logging level
