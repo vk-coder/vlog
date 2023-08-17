@@ -159,41 +159,41 @@ func (l *Logger) Critical(v ...interface{}) {
 // Tracef emits a log at tracef logging level with specified format string
 func (l *Logger) Tracef(format string, v ...interface{}) {
 	if TRACE >= l.level {
-		l.output("trace ", v...)
+		l.output("trace ", fmt.Sprintf(format, v...))
 	}
 }
 
 // Debugf emits a log at debugf logging level with specified format string
 func (l *Logger) Debugf(format string, v ...interface{}) {
 	if DEBUG >= l.level {
-		l.output("debug ", v...)
+		l.output("debug ", fmt.Sprintf(format, v...))
 	}
 }
 
 // Infof emits a log at infof logging level with specified format string
 func (l *Logger) Infof(format string, v ...interface{}) {
 	if INFO >= l.level {
-		l.output("info ", v...)
+		l.output("info ", fmt.Sprintf(format, v...))
 	}
 }
 
 // Warnf emits a log at warnf logging level with specified format string
 func (l *Logger) Warnf(format string, v ...interface{}) {
 	if WARN >= l.level {
-		l.output("warn ", v...)
+		l.output("warn ", fmt.Sprintf(format, v...))
 	}
 }
 
 // Errorf emits a log at errorf logging level with specified format string
 func (l *Logger) Errorf(format string, v ...interface{}) {
 	if ERROR >= l.level {
-		l.output("error ", v...)
+		l.output("error ", fmt.Sprintf(format, v...))
 	}
 }
 
 // Criticalf emits a log at criticalf logging level with specified format string
 func (l *Logger) Criticalf(format string, v ...interface{}) {
 	if CRITICAL >= l.level {
-		l.output("critical ", v...)
+		l.output("critical ", fmt.Sprintf(format, v...))
 	}
 }
