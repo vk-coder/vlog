@@ -60,9 +60,9 @@ func TestLog(t *testing.T) {
 		{
 			"Tracef",
 			func(lg *vlog.Logger) {
-				lg.Tracef("%s", "hello!")
+				lg.Tracef("%s world!", "hello")
 			},
-			".* trace hello!",
+			".* trace hello world!",
 		},
 		{
 			"Critical",
@@ -74,9 +74,9 @@ func TestLog(t *testing.T) {
 		{
 			"Criticalf",
 			func(lg *vlog.Logger) {
-				lg.Criticalf("%s", "hello!")
+				lg.Criticalf("%s world!", "hello")
 			},
-			".* critical hello!",
+			".* critical hello world!",
 		},
 	}
 
@@ -108,23 +108,23 @@ func TestLogLevel(t *testing.T) {
 		{
 			"Debug",
 			func(lg *vlog.Logger) {
-				lg.Debugf("%s", "hello!")
+				lg.Debug("hello")
 			},
 			"",
 		},
 		{
 			"Info",
 			func(lg *vlog.Logger) {
-				lg.Infof("%s", "hello!")
+				lg.Infof("%s world!", "hello")
 			},
-			".* info hello!",
+			".* info hello world!",
 		},
 		{
 			"Warn",
 			func(lg *vlog.Logger) {
-				lg.Warnf("%s", "hello!")
+				lg.Warnf("%s world!", "hello")
 			},
-			".* warn hello!",
+			".* warn hello world!",
 		},
 	}
 
