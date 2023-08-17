@@ -10,10 +10,6 @@ logger := vlog.GetLogger("example", nil)
 logger.Tracef("%s, a trace log", "Hello!")
 logger.Debug("Hello!, a debug log")
 
-logger.Debug("logging message")
-logger.Event("create-user").Field("username", "foo").
-    Field("email", "bar@buzz.com").Field("Age", 25).Info()
-
 // Output:
 // trace Hello!, a trace log
 // debug Hello!, a debug log
